@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Location Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel controls">
+        <div>
+          <p class="eyebrow">Consent-based location</p>
+          <h1>Invite a phone to share GPS</h1>
+          <p class="muted">The phone owner must open the invite, tap Start sharing, and allow location permission.</p>
+        </div>
+
+        <div class="control-stack">
+          <input id="publicUrl" type="url" placeholder="Public HTTPS URL, example https://your-app.onrender.com" />
+          <div class="search-row">
+            <input id="searchPhone" type="tel" placeholder="+919876543210" autocomplete="tel" />
+            <button id="trackBtn">Track</button>
+            <button id="inviteBtn" class="secondary">Invite</button>
+          </div>
+          <p id="status" class="status">Enter a phone number, create an invite, then track after sharing starts.</p>
+        </div>
+      </section>
+
+      <section id="map" aria-label="Map showing shared phone location"></section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/dashboard.js"></script>
+  </body>
+</html>

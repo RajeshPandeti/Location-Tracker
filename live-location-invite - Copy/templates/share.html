@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Share Location</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell narrow">
+      <section class="panel">
+        <p class="eyebrow">Permission required</p>
+        <h1>Share this phone's GPS location</h1>
+        <p class="muted">
+          Open this page in a mobile browser, tap Start sharing, and allow location permission. This sends this device's GPS location to the dashboard every 10 seconds.
+        </p>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="+919876543210" autocomplete="tel" />
+
+        <div class="actions">
+          <button id="startBtn">Start sharing</button>
+          <button id="stopBtn" class="secondary" disabled>Stop</button>
+        </div>
+
+        <button id="openBrowserBtn" class="secondary">Open in browser</button>
+
+        <p id="status" class="status">Location sharing is off.</p>
+      </section>
+    </main>
+
+    <script src="/static/share.js"></script>
+  </body>
+</html>
